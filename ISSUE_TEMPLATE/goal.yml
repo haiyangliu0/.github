@@ -1,0 +1,20 @@
+name: Goal
+description: 一个目标（父 Issue 或子问题）
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: 要达到什么，一两句，用你自己的话
+    validations:
+      required: true
+  - type: input
+    id: verifier
+    attributes:
+      label: Verifier
+      description: 可选。用什么判断，例：verifier/v3.0 @ <评测集>；子问题不填就沿用父 Issue 的
+  - type: input
+    id: baseline
+    attributes:
+      label: Baseline
+      description: 可选。和谁比，例：model/v1.0 + 当前推荐用法；子问题不填就沿用父 Issue 的
